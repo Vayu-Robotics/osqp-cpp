@@ -86,8 +86,7 @@ target_include_directories(osqp-cpp PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SO
 message(STATUS "osqp-cpp: Added osqp-cpp library.")
 install(TARGETS osqp-cpp 
         ARCHIVE DESTINATION lib
-        LIBRARY DESTINATION lib
-        BINARY DESTINATION bin)
+        LIBRARY DESTINATION lib)
 install (
     DIRECTORY ${CMAKE_SOURCE_DIR}/include/
     DESTINATION include
