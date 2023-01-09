@@ -84,6 +84,14 @@ add_library(osqp-cpp src/osqp++.cc)
 target_link_libraries(osqp-cpp PUBLIC absl::strings absl::status absl::statusor Eigen3::Eigen PRIVATE osqpstatic ${CMAKE_DL_LIBS})
 target_include_directories(osqp-cpp PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>")
 message(STATUS "osqp-cpp: Added osqp-cpp library.")
+install(TARGET osqp-cpp 
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib
+        BINARY DESTINATION bin)
+install (
+    DIRECTORY ${CMAKE_SOURCE_DIR}/include/
+    DESTINATION include
+    FILES_MATCHING PATTERN "*.h*")
 
 # Build and register tests.
 if (OSQP-CPP_BUILD_TESTS)
