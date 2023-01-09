@@ -24,8 +24,8 @@
 #include "absl/base/attributes.h"
 #include "absl/status/status.h"
 #include "absl/status/statusor.h"
-#include "Eigen/Core"
-#include "Eigen/SparseCore"
+#include "eigen3/Eigen/Core"
+#include "eigen3/Eigen/SparseCore"
 
 namespace osqp {
 
